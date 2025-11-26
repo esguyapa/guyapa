@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erik Guyapa Portfolio</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    background: linear-gradient(to bottom right, #ffd6f5, #f0c9ff, #e6b8ff);
+    color: #4a2d57;
+  }
+
+  header {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  header h1 {
+    margin-top: 20px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #803c96;
+  }
+
+  header p {
+    margin-top: 10px;
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #5b3a63;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #ffb8e5;
+    border-radius: 20px;
+    color: #702b8f;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    background: #e29fff;
+    color: white;
+  }
+
+  section {
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #782d92;
+  }
+
+  /* Artwork Cards */
+  .art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 12px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .view-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: linear-gradient(to right, #ff9adf, #a86dff);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  /* Fullscreen Modal */
+  #imgModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #imgModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+  }
+
+  #imgModal:active {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <img src="yourprofile.jpg.jpg" alt="Erik Profile">
+  <h1>ERIK ANGELO GUYAPA</h1>
+  <p>"The most beautiful thing that you can be is yourself."</p>
+</header>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#experience">Experience</a>
+  <a href="#artworks">Artworks</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am Erik Guyapa, 19 years old from Caloocan City. I am a 2nd-year Multimedia Arts student at FEU Tech. I love drawing, animating, and collecting Barbie dolls.</p>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <p><strong>Educational Attainment</strong></p>
+  <ul>
+    <li>Elementary – Our Lady of Lourdes</li>
+    <li>High School – Our Lady of Lourdes</li>
+    <li>Senior High – National University Fairview</li>
+    <li>College – FEU Tech (1st–2nd year)</li>
+  </ul>
+
+  <p><strong>Work Experience</strong></p>
+  <ul>
+    <li>VFX Effects Editor – Star Cinema (2023–2024)</li>
+    <li>Animator – Disney Animation Studios (2022–2023)</li>
+    <li>Call Center Agent – IQOR (2023–2024)</li>
+  </ul>
+
+  <p><strong>Achievements</strong></p>
+  <ul>
+    <li>Graduated NU With Honors (2022–2023)</li>
+    <li>Graduated NU With Honors (2023–2024)</li>
+  </ul>
+
+  <p><strong>Skills</strong></p>
+  <ul>
+    <li>2D/3D Animation Software</li>
+    <li>Storyboarding & Visual Storytelling</li>
+    <li>Character Rigging & Motion Design</li>
+    <li>Timing, Pacing & Animation Principles</li>
+  </ul>
+</section>
+
+<section id="artworks">
+  <h2>Artworks</h2>
+  <div class="art-grid">
+
+    <div class="card">
+      <img src="3d1.img.png" alt="">
+      <button class="view-btn" onclick="openModal('3dwork1.jpg')">View</button>
+    </div>
+
+    <div class="card">
+      <img src="3d2.img.png" alt="">
+      <button class="view-btn" onclick="openModal('3dwork2.jpg')">View</button>
+    </div>
+
+    <div class="card">
+      <img src="2d1.img.png" alt="">
+      <button class="view-btn" onclick="openModal('2d1.jpg')">View</button>
+    </div>
+
+    <div class="card">
+      <img src="2d2.img.png" alt="">
+      <button class="view-btn" onclick="openModal('2d2.jpg')">View</button>
+    </div>
+
+    <div class="card">
+      <img src="2d3.img.png" alt="">
+      <button class="view-btn" onclick="openModal('2d3.jpg')">View</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <strong>erikangeloguyapa@gmail.com</strong></p>
+  <p>Facebook: <strong>Erik Angelo Guyapa</strong></p>
+  <p>Phone: <strong>09762481156</strong></p>
+</section>
+
+<!-- Modal Preview -->
+<div id="imgModal" onclick="this.style.display='none'">
+  <img id="modalImg">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById("imgModal").style.display = "flex";
+    document.getElementById("modalImg").src = src;
+  }
+</script>
+
+</body>
+</html>
